@@ -10,7 +10,7 @@ body {
 body #bg {
   -webkit-clip-path: polygon(100% 0, 100% 50%, 51% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 50%, 51% 100%, 0 100%, 0 0);
-  background-color: #005dff;
+  background-color: #80deea;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -92,7 +92,7 @@ main section#card ul li strong {
 }
 
 main section#primary {
-  color: white;
+  color: black;
   padding: 15px;
   text-align: center;
 }
@@ -129,7 +129,7 @@ main section#primary a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #fff6bb;
+  background-color: #ccff90;
   display: block;
   text-align: center;
   margin: 50px auto 0 auto;
