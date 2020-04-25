@@ -1,9 +1,9 @@
 //these are variables
 $colors: (
-    primary: #005dff,
-    accent: #fff6bb,
-    primary-light: lighten(#005dff, 40%), 
-    primary-dark: darken(#005dff, 40%), 
+    primary: #80deea,
+    accent: #ccff90,
+    primary-light: lighten(#80deea, 40%), 
+    primary-dark: darken(#80deea, 40%), 
 );
 $padding: 15px;
 $borders: 15px;
@@ -31,24 +31,29 @@ body {
     margin: 0;
     #bg {
         // https://bennettfeely.com/clippy/
-        clip-path: polygon(100% 0, 100% 50%, 51% 100%, 0 100%, 0 0);
-        background-color: color(primary);
+        clip-path: polygon(100% 0, 100% 50%, 51% 100%, 0 100%, 0 0); //background form
+        background-color: color(primary); //function color, color name defined by $colors
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: -1; // creates bg, everything on top
 
         @include desktop {
-            clip-path: polygon(0 0, 76% 0, 53% 100%, 0% 100%);
+            clip-path: polygon(0 0, 76% 0, 53% 100%, 0% 100%);//background form for desktop
         }
     }
 
     header a {
+        //font-family:'Liu Jian Mao Cao', cursive;
         color: white;
         text-decoration: none;
         padding: $padding;
         display: block;
         text-transform: uppercase;
+    }
+
+    header a:hover{
+        opacity: .8;
     }
 }
 
@@ -85,6 +90,15 @@ main {
             li {
                 margin-bottom: 10px;
 
+                a {
+                    color: black;                    
+                }
+                a:hover{                    
+                    opacity: .5;
+                }
+                a:visited {
+                    color: color(primary-dark);
+                }
                 span {
                     position: absolute;
                     content: '';
@@ -105,7 +119,8 @@ main {
     }
 
     section#primary {
-        color: white;
+        //color: white;
+        color: black;
         padding: $padding;
         text-align: center;
 
@@ -116,9 +131,10 @@ main {
         }
 
         h1 {
+            font-family: 'Liu Jian Mao Cao', cursive;
             font-size: 3em;
             margin-top: 10px;
-            text-transform: uppercase;
+            //text-transform: uppercase;
 
             @include desktop {
                 width: 30%;
@@ -128,11 +144,12 @@ main {
         }
 
         p {
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
-
+        
         a {
-            color: color(primary-dark);
+            //color: color(primary-dark);
+            color: black;
             border-radius: $borders;
             text-decoration: none;
             text-transform: uppercase;
@@ -148,6 +165,14 @@ main {
                 display: inline-block;
                 padding: $padding $padding * 4;
             }
+        }
+
+        a:hover{                    
+            opacity: .8;
+        }
+
+        a:visited {
+            color: color(primary-dark);
         }
     }
 }
