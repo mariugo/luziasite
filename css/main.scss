@@ -35,7 +35,8 @@ body {
         background-color: color(primary); //function color, color name defined by $colors
         width: 100%;
         height: 100%;
-        position: absolute;
+        // position: absolute;
+        position: fixed;
         z-index: -1; // creates bg, everything on top
 
         @include desktop {
