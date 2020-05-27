@@ -118,6 +118,9 @@ main {
                     margin-left: max($numbers: 40px);
                     margin-top: 10px;
                 }
+                address{
+                    font-style: normal;
+                }
             }
         }
 
@@ -177,6 +180,34 @@ main {
         }
 
         a:visited {
+            color: color(primary-dark);
+        }
+        
+        address{
+            color: black;            
+            border-radius: $borders;
+            font-style: normal;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            //background-color: color(accent);
+            //display: block;
+            text-align: center;
+            //margin: 50px auto 0 auto;
+            padding: $padding;
+            //box-shadow: 0 10px 30px rgba($color: #000000, $alpha: .1);
+
+            @include desktop {
+                display: inline-block;
+                //padding: $padding $padding * 4;
+            }
+        }
+
+        address:hover{                    
+            opacity: .8;
+        }
+
+        address:visited {
             color: color(primary-dark);
         }
     }

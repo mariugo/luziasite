@@ -112,6 +112,10 @@ main section#card ul li strong {
   margin-top: 10px;
 }
 
+main section#card ul li address {
+  font-style: normal;
+}
+
 main section#primary {
   color: black;
   padding: 15px;
@@ -171,6 +175,31 @@ main section#primary a:hover {
 }
 
 main section#primary a:visited {
+  color: #167b88;
+}
+
+main section#primary address {
+  color: black;
+  border-radius: 15px;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (min-width: 1024px) {
+  main section#primary address {
+    display: inline-block;
+  }
+}
+
+main section#primary address:hover {
+  opacity: .8;
+}
+
+main section#primary address:visited {
   color: #167b88;
 }
 /*# sourceMappingURL=main.css.map */
