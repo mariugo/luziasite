@@ -32,7 +32,12 @@
             </p>
             <figure>
                 <img width="110%" src="img/img2.png"
-                    alt="algoritmo de busca do voluntário - ao clicar em fazer ligação, o algoritmo procura pelos usuários que são voluntários, um voluntário é selecionado, dando prioridade para os voluntários que ainda não atenderam nenhuma ligação, se o voluntário selecionado está disponível, ele recebe a ligação, se não é feita outra busca e selecionado outro voluntário.">
+                    alt="algoritmo de busca do voluntário - ao clicar em fazer ligação, 
+                    o algoritmo procura pelos usuários que são voluntários, um voluntário é selecionado, 
+                    dando prioridade para os voluntários que ainda não atenderam nenhuma ligação,
+                    se o voluntário selecionado está disponível, ele recebe a ligação;
+                    se não é enviada uma mensagem na tela do usuário cego ou deficiente visual
+                    avisando que ele pode ligar novamente, assim o algoritmo será acionado novamente selecionando outro voluntário.">
                 <figcaption>
                     <h6>Algoritmo de busca do voluntário</h6>
                 </figcaption>
@@ -67,14 +72,14 @@
                         Adaptamos a ideia do
                         Be my eyes para a comunidade brasileira, após análise da experiência de usuários
                         brasileiros com o aplicativo Be my eyes, onde notamos a falta da linguagem
-                        Português-Brasil como opção, a explicação da ferramenta em si,
+                        Português-Brasil como opção, a explicação da ferramenta
                         disponibilizada somente em Inglês, e a falta de clareza para os voluntários na questão de como
                         é realizada a seleção de quem recebe as ligações e se há alguma prioridade.
                     </p>
                 </li>
                 <li>
                     <p>
-                        Para usar o App, você precisa de um aparelho Android ou IOS, onde poderá instalar o aplicativo e
+                        Para usar o App, você precisa de um aparelho Android ou um emulador IOS, onde poderá instalar o aplicativo e
                         se cadastrar como usuário voluntário ou usuário com deficiência visual, após aceitar nossas <a
                             href="politica.html">políticas de uso e privacidade</a>.
                     </p>
@@ -99,17 +104,49 @@
                 <li>
                     <p>
                         O voluntário selecionado recebe uma notificação em seu aparelho avisando que ele tem
-                        uma ligação, e caso o voluntário selecionado não atenda dentro do tempo de espera astipulado (30
-                        segundos), o algoritmo busca por outro voluntário.
+                        uma ligação, e caso o voluntário selecionado não atenda dentro do tempo de espera astipulado (15
+                        segundos), o algoritmo busca por outro voluntário (seguindo as condições estipuladas).
                     </p>
                 </li>
                 <li>
                     <p>
-                        São feitas 5 tentativas, e caso nenhum desses 5
-                        voluntários atenda, o usuário com deficiência visual recebe uma mensagem no aplicativo,
-                        dizendo que nenhum voluntário foi encontrado e que ele deve ligar novamente.
+                        O usuário com deficiência visual pode realizar quantas chamadas forem necessárias para encontrar um voluntário. 
+                        Quando o voluntário selecionado não atende a ligação, o usuário cego ou deficiente visual recebe uma mensagem 
+                        na tela do aplicativo,
+                        dizendo que o voluntário selecionado não estava disponível e que ele deve ligar novamente.
                     </p>
                 </li>
+                <li>
+                    <p>
+                        A primeira condição usada pelo algortimo de busca para selecionar um voluntário, é que o voluntário ainda não tenha 
+                        ajudado 
+                        (não tenha atendido nenhuma ligação), e que não tenha perdido mais do que 2 ligações. 
+                    </p>
+                    <p>
+                        Não encontrando voluntários 
+                        que se enquadrem nessa regra, ele buscará por um voluntário que não tenha rejeitado/perdido nenhuma ligação. 
+                    </p>
+                    <p>
+                        Não 
+                        encontrando voluntários que se enquadrem nessa condição, ele buscará por um voluntário que nunca tenha ajudado 
+                        (priorizando novamente os voluntários que ainda não atenderam nenhuma ligação). 
+                    </p>
+                    <p>
+                        A última condição, caso nenhuma das 
+                        anteriores tenha sido atendida, é a de selecionar um entre todos os voluntários cadastrados. 
+                    </p>
+                    <p>
+                        Cada condição retorna uma lista de 
+                        voluntários que satisfaçam à regra utilizada, na ordem em que foram explicadas, respectivamente. 
+                        Da lista retornada 
+                        pela condição, é selecionado um voluntário de forma aleatória. 
+                    </p>
+                    <p>
+                        Todas as condições estipuladas foram pensadas
+                        levando em consideração evitar conflitos, e priorizar os voluntários que ainda não ajudaram.
+                    </p>
+                </li>
+                <li><h5><a href="https://github.com/JulianySavazzi/luzia" target="_blank">Acesse o código do aplicativo disponível no github.</a></h5></li>
                 <!--
                 <li>
                     <p>
